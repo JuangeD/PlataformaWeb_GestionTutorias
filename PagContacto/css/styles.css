@@ -1,0 +1,117 @@
+/* Stylos basicos del bodi */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #d3cdcd;
+}
+
+/* Estilos header */
+
+
+header {
+text-align: center;
+background-color: #333;
+border-bottom: 2px solid #ccc;
+padding: 15px;
+color: white;
+}
+
+
+/* Botones*/
+button {
+background-color: #007bff;
+color: white;
+border: 1px solid #0056b3;
+border-radius: 4px;
+padding: 6px 12px;
+cursor: pointer;
+}
+
+#btnReg {
+
+color: black;
+border: 1px solid #999;
+border-radius: 4px;
+padding: 6px 12px;
+cursor: pointer;
+}
+
+/* Main */
+
+
+
+/* Contenedor principal responsive */
+#main-principal {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    display: grid;
+    /* En pantallas normales, divide el espacio en 2 columnas iguales y flexibles */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px; /* Evita que crezca demasiado en pantallas gigantes */
+    margin: 0 auto;   /* Centra todo el conjunto en la pantalla */
+    text-align: center;
+    margin-top: 1.3%;
+}
+
+/* el mapa ocupará las 2 columnas en pantallas grandes */
+#div3 {
+    grid-column: span 2; 
+}
+
+/* Estilos para que el mapa se mueva bien*/
+#div3 iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+}
+
+#div3 div {
+    border-color: transparent;
+    
+    
+}
+
+#div3 a{
+    color: black;
+}
+
+div p {
+    font-size: 20px;
+    white-space: pre-wrap; /*Esta opcion respeta los epsacios en blanco y tabulaciones dentro de las p*/
+}
+div h1 {
+    font-size: 40px;
+   
+}
+   
+/* Estilos para listas dentro del main */
+#main-principal div ul, 
+#main-principal div ol {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 15px;
+position: fixed; 
+bottom: 0;
+width: 100%;
+
+white-space: pre-wrap; /*Esta opcion respeta los epsacios en blanco y tabulaciones dentro de las p*/
+}
+
+footer a {
+
+    color: white;
+
+}
+
