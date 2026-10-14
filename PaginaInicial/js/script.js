@@ -48,6 +48,7 @@ if(logUsuario == "usuario" && logPass == "contraseña"){
     mensaje.innerHTML = "REDIRIGIENDO...";
     mensaje.className = "mensaje-exito"
     
+    window.location.href = "/PagTablonAnuncios/index.html"; // Si el inicio de sesión es exitoso, redirigir al tablón de anuncios
 /**
  * Segundo y tercer if, si encontramos que el usuario o la contraseña
  *  no a sido introducido mandamos el mensaje
