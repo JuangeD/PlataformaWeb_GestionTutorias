@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón de Anuncios</title>
+    <link rel="stylesheet" href="/PagFichaDatosAlumno/css/style.css">
+    <script src="/PagFichaDatosAlumno/js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="titulo">Ficha de datos de alumnos</div>
+        <div class="accionesUsuario">
+            <span class="usuarioLogeado">Usuario: admin</span>
+            <!-- Al hacer click, vuelve al login -->
+            <button class="btnCerrarSesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/PagTablonAnuncios/index.html">Anuncios</a>
+        <a href="/PagFichaDatosAlumno/index.html">Ficha datos alumno</a>
+        <a href="#">Gestión de citas</a>
+    </nav>
+
+
+    <main>
+        <section id="registro">
+            <form action="POST">
+                <!-- Nombre -->
+                <div class="camposFormulario">
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" id="nombre" placeholder="nombre" required>
+                </div>
+                
+                <!-- Apellidos -->
+                <div class="camposFormulario">
+                    <label for="apellidos">Apellidos</label><br>
+                    <input type="text" id="apellidos" placeholder="Apellidos" required>
+                </div>
+                
+                <!-- Edad -->
+                <div class="camposFormulario">
+                    <label for="edad">Edad</label><br>
+                    <input type="text" id="edad" placeholder="Edad" required>
+                </div class="camposFormulario">
+                <br>
+                <!-- Curso -->
+                <div class="camposFormulario">
+                    <label for="curso">Curso</label><br>
+                    <input type="text" id="curso" placeholder="Curso" required>
+                </div>
+                
+                <!-- Notas -->
+                <div class="camposFormulario">
+                    <label for="notas">Notas</label><br>
+                    <input type="text" id="notas" placeholder="Notas" required>
+                </div>
+                
+            </form>
+
+            <div id="divBotonAlumno">
+                <button class="btnAlumno">Añadir alumno</button>
+            </div>
+            
+        </section>
+        
+        <section id="alumnosRegistrados">
+            <h1>Alumnos registrados</h1>
+
+            <div class="tarjetaAlumno">
+                <p><strong>Nombre y apellidos:</strong> Juan Pérez García</p>
+                <p><strong>Edad:</strong> 16 años</p>
+                <p><strong>Curso:</strong> 1 Bachillerato</p>
+                <p><strong>Notas:</strong> Mates (8)</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="/PaginaInicial/index.html">Inicio</a>
+        <span>2026 Pagina Proyecto Web. Salvador - Juan Gerardo - Ángel.</span>
+        <a href="/PagContacto/index.html">Contacto</a>
+    </footer>
+
+</body>
+</html>

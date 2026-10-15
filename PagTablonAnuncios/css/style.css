@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #d1d1d1;
-    /* Fondo general gris claro de la imagen */
+    /* Fondo general gris claro */
 }
 
 /* ================= HEADER ================= */
@@ -46,7 +46,6 @@ header {
 
 .btnCerrarSesion {
     background-color: #007bff;
-    /* Azul similar al de la imagen */
     color: white;
     border: none;
     padding: 6px 15px;
@@ -94,7 +93,6 @@ main {
 
 .seccionNoticias {
     background-color: #e0e0e0;
-    /* Fondo de la tarjeta similar a la imagen */
     border: 1px solid #777;
     /* Borde oscuro */
     border-radius: 8px;
