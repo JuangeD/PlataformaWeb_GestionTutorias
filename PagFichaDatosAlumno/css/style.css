@@ -109,11 +109,8 @@ main {
     color: #ffffff;
 
     border: 0px solid #000000;
-    border-radius: 0.2rem;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-radius: 0.5rem;
+    padding: 1%;
 }
 
 .btnAlumno:hover { /* Estilo del botón de añadir alumno al pasar el cursor por encima */
@@ -143,7 +140,7 @@ main {
     text-align: center;
 }
 
-#alumnosRegistrados { /* Estilo de la sección de los datos de alumnos registrados */
+#registroAlumnos { /* Estilo de la sección de los datos de alumnos registrados */
     background-color: #adadad;
     border: 1px solid #000000;
     margin-top: 1%;
@@ -152,8 +149,29 @@ main {
     border-radius: 0.2rem;
 }
 
-#alumnosRegistrados h1 { /* Estilo del título de la sección de los alumnos registrados */
+#alumnosRegistrados { /* Estilo de la sección de los datos de alumnos registrados */
+    display: flex;
+    flex-direction: row;
+}
+
+#registroAlumnos h1 { /* Estilo del título de la sección de los alumnos registrados */
     text-align: center;
+}
+
+/* ================= BTNELIMINAR ================= */
+.btnEliminar {
+  background-color: #dc3545; /* Color rojo para indicar precaución/borrado */
+  color: #ffffff; /* Texto en blanco para contrastar */
+  border: none; /* Quito el borde por defecto */
+  padding: 8px 16px; /* Espaciado interno para darle forma */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.btnEliminar:hover {
+  background-color: #c82333; /* Un tono de rojo más oscuro al pasar el ratón */
 }
 
 /* ================= FOOTER ================= */
