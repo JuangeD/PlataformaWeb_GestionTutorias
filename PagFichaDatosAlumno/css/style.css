@@ -136,6 +136,10 @@ main {
     border-radius: 0.2rem;
 }
 
+#registro h1 {
+    text-align: center;
+}
+
 #divBotonAlumno { /* Centro el botón de añadir alumno */
     text-align: center;
 }
