@@ -28,15 +28,15 @@
             <!-- Panel Izquierdo: Formulario para pedir cita -->
             <div class="panel">
                 <div class="panel-title">Solicitar Nueva Tutoría</div>
-                <form>
+                <form method="get">
                     <div class="form-group">
-                        <label for="profesor">Profesor / Departamento:</label>
-                        <select id="profesor" class="form-control" required>
+                        <label for="citado">Profesor/Departamento citado:</label>
+                        <select id="citado" class="form-control" required>
                             <option value="">Seleccione a quién va dirigida...</option>
-                            <option value="tutoria">Tutoría</option>
-                            <option value="notas">Consultoría de notas</option>
-                            <option value="otros">Otros problemas</option>
-                            <option value="jefatura">Jefatura de Estudios</option>
+                            <option value="Tutoría">Tutoría</option>
+                            <option value="Notas">Secretaría</option>
+                            <option value="Otros">Otros problemas</option>
+                            <option value="Jefatura de Estudios">Jefatura de Estudios</option>
                         </select>
                     </div>
                     
@@ -55,7 +55,7 @@
                         <input type="text" id="motivo" class="form-control" placeholder="Breve descripción del asunto..." required>
                     </div>
 
-                    <button type="submit" class="btn-submit">Solicitar Cita</button>
+                    <button type="button" class="btnCita">Solicitar Cita</button>
                 </form>
             </div>
 
@@ -68,7 +68,7 @@
                     <div class="cita-card">
                         <div class="cita-info">
                             <h4>Tutoría</h4>
-                            <p><strong>Fecha:</strong> 20 de Octubre de 2026</p>
+                            <p><strong>Fecha:</strong> 20/10/2026</p>
                             <p><strong>Hora:</strong> 11:30</p>
                             <p><strong>Motivo:</strong> Tutoría de 1 DAW para revisión del trimestre</p>
                         </div>
@@ -79,7 +79,7 @@
                     <div class="cita-card">
                         <div class="cita-info">
                             <h4>Jefatura de Estudios</h4>
-                            <p><strong>Fecha:</strong> 22 de Octubre de 2026</p>
+                            <p><strong>Fecha:</strong> 22/10/2026</p>
                             <p><strong>Hora:</strong> 10:00</p>
                             <p><strong>Motivo:</strong> Justificación de faltas de asistencia</p>
                         </div>
