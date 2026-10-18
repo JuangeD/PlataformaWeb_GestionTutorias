@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas - Plataforma de Gestión</title>
+    <link rel="stylesheet" href="/PagGestionCitas/css/style.css">
+    <script src="/PagGestionCitas/js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-title">Plataforma de Gestión - Citas y Tutorías</div>
+        <div class="header-actions">
+            <span class="user-greeting">Usuario: admin</span>
+            <button class="btnCerrarSesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/PagTablonAnuncios/index.html">Tablón de Anuncios</a>
+        <a href="/PagFichaDatosAlumno/index.html">Ficha datos alumno</a>
+        <a href="/PagGestionCitas/index.html">Gestión de citas</a>
+    </nav>
+
+    <main>
+        <div class="container-citas">
+            <!-- Panel Izquierdo: Formulario para pedir cita -->
+            <div class="panel">
+                <div class="panel-title">Solicitar Nueva Tutoría</div>
+                <form method="get">
+                    <div class="form-group">
+                        <label for="citado">Profesor/Departamento citado:</label>
+                        <select id="citado" class="form-control" required>
+                            <option value="">Seleccione a quién va dirigida...</option>
+                            <option value="Tutoría">Tutoría</option>
+                            <option value="Notas">Secretaría</option>
+                            <option value="Otros">Otros problemas</option>
+                            <option value="Jefatura de Estudios">Jefatura de Estudios</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivo">Motivo de la cita:</label>
+                        <input type="text" id="motivo" class="form-control" placeholder="Breve descripción del asunto..." required>
+                    </div>
+
+                    <button type="button" class="btnCita">Solicitar Cita</button>
+                </form>
+            </div>
+
+            <!-- Panel Derecho: Citas ya programadas -->
+            <div class="panel">
+                <div class="panel-title">Tutorías Programadas</div>
+                <div class="lista-citas">
+                    
+                    <!-- Cita simulada 1 -->
+                    <div class="cita-card">
+                        <div class="cita-info">
+                            <h4>Tutoría</h4>
+                            <p><strong>Fecha:</strong> 20/10/2026</p>
+                            <p><strong>Hora:</strong> 11:30</p>
+                            <p><strong>Motivo:</strong> Tutoría de 1 DAW para revisión del trimestre</p>
+                        </div>
+                        <button class="btnEliminar">Cancelar</button>
+                    </div>
+
+                    <!-- Cita simulada 2 -->
+                    <div class="cita-card">
+                        <div class="cita-info">
+                            <h4>Jefatura de Estudios</h4>
+                            <p><strong>Fecha:</strong> 22/10/2026</p>
+                            <p><strong>Hora:</strong> 10:00</p>
+                            <p><strong>Motivo:</strong> Justificación de faltas de asistencia</p>
+                        </div>
+                        <button class="btnEliminar">Cancelar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/PaginaInicial/index.html">Inicio</a>
+        <span>2026 Pagina Proyecto Web. Salvador - Juan Gerardo - Ángel.</span>
+        <a href="/PagContacto/index.html">Contacto</a>
+    </footer>
+
+</body>
+</html>

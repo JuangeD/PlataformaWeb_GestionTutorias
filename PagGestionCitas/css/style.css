@@ -1,0 +1,222 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d1d1d1;
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #333333;
+    color: white;
+    padding: 30px 20px 20px 20px;
+    border-bottom: 2px solid #222;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding-right: 5%;
+}
+
+.user-greeting {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btnCerrarSesion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btnCerrarSesion:hover {
+    background-color: #0056b3;
+}
+
+/* ================= NAVIGATION ================= */
+nav {
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    border-bottom: 2px solid #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #666666;
+}
+
+/* ================= MAIN CONTENT ================= */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container-citas {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+/* Paneles Izquierdo y Derecho */
+.panel {
+    background-color: #e0e0e0;
+    border: 1px solid #777;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btnCita {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btnCita:hover {
+    background-color: #0056b3;
+}
+
+/* Lista de Citas (Tarjetas) */
+.lista-citas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cita-card {
+    background-color: white;
+    border-left: 5px solid #17a2b8;
+    /* Acento azul */
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cita-info h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.cita-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+/* ================= BTNELIMINAR ================= */
+.btnEliminar {
+  background-color: #dc3545; /* Color rojo para indicar precaución/borrado */
+  color: #ffffff; /* Texto en blanco para contrastar */
+  border: none; /* Quito el borde por defecto */
+  padding: 8px 16px; /* Espaciado interno para darle forma */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.btnEliminar:hover {
+  background-color: #c82333; /* Un tono de rojo más oscuro al pasar el ratón */
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #cccccc;
+}

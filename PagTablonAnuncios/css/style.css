@@ -1,0 +1,184 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estructura principal para mantener el footer abajo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d1d1d1;
+    /* Fondo general gris claro */
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #333333;
+    /* Cabecera oscura */
+    color: white;
+    padding: 30px 20px 20px 20px;
+    border-bottom: 2px solid #222;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.accionesUsuario {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding-right: 5%;
+}
+
+.usuarioLogeado {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btnCerrarSesion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btnCerrarSesion:hover {
+    background-color: #0056b3;
+}
+
+/* ================= NAV ================= */
+nav {
+    background-color: #444444;
+    /* Un tono ligeramente más claro que el header para diferenciarlo */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    border-bottom: 2px solid #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #666666;
+}
+
+/* ================= MAIN ================= */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.seccionNoticias {
+    background-color: #e0e0e0;
+    border: 1px solid #777;
+    /* Borde oscuro */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tituloSeccion {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Anuncios simulados */
+.tarjetasAnuncios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.anuncio {
+    background-color: white;
+    border-left: 5px solid #28a745; 
+    padding: 15px 20px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    transition-duration: 0.5s; /* Permite mantener una animación fluida al quitarse el cursor de encima */
+}
+
+.anuncio:nth-child(2) { /* Con :nth-child se le aplica un estilo específico a un elemento según su posición en el árbol DOM. Se le indica
+                        el número del "hijo"/elemento que se quiere modificar*/
+    border-left-color: #ffc107;
+}
+
+.anuncio:nth-child(3) {
+    border-left-color: #17a2b8;
+}
+
+.anuncio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 5px 5px #919191;
+
+    transition-duration: 0.5s;
+}
+
+.anuncio h3 {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.anuncio p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.anuncio .publicacion {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #333333;
+    /* Pie oscuro */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #cccccc;
+}
