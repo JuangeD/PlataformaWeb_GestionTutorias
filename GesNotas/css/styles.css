@@ -1,0 +1,300 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estructura principal para mantener el footer abajo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d1d1d1;
+    /* Fondo general gris claro */
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #333333;
+    color: white;
+    padding: 30px 20px 20px 20px;
+    border-bottom: 2px solid #222;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.accionesUsuario {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding-right: 5%;
+}
+
+.usuarioLogeado {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btnCerrarSesion {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btnCerrarSesion:hover {
+    background-color: #0056b3;
+}
+
+/* ================= NAV ================= */
+nav {
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px 0;
+    border-bottom: 2px solid #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #666666;
+}
+
+/* ================= MAIN ================= */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contenedorPaneles {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Paneles (izquierdo: formulario / derecho: listado) */
+.panel {
+    background-color: #e0e0e0;
+    border: 1px solid #777;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panelFormulario {
+    flex: 0 1 380px;
+}
+
+.panelListado {
+    flex: 2 1 500px;
+}
+
+.tituloPanel {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* ================= FORMULARIO ================= */
+.grupoFormulario {
+    margin-bottom: 15px;
+}
+
+.grupoFormulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.campo {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btnAnadir {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btnAnadir:hover {
+    background-color: #0056b3;
+}
+
+/* Mensaje de validación (mismo criterio que la página inicial) */
+#mensaje {
+    margin-top: 12px;
+    text-align: center;
+    min-height: 1.2rem;
+}
+
+.mensaje-exito {
+    color: green;
+    font-weight: bold;
+}
+
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+}
+
+/* ================= FILTRO ================= */
+.barraFiltro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.barraFiltro label {
+    font-weight: bold;
+    color: #444;
+}
+
+.barraFiltro .campo {
+    width: auto;
+    min-width: 180px;
+}
+
+/* ================= TABLA ================= */
+.contenedorTabla {
+    overflow-x: auto;
+}
+
+.tablaNotas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tablaNotas th {
+    background-color: #444444;
+    color: white;
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+.tablaNotas td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.tablaNotas tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.notaAprobada {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.notaSuspensa {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Resumen inferior */
+.resumenNotas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.notaMedia {
+    background-color: white;
+    border-left: 5px solid #17a2b8;
+    padding: 10px 20px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-weight: bold;
+}
+
+/* ================= BTNELIMINAR ================= */
+.btnEliminar {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.btnEliminar:hover {
+    background-color: #c82333;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #cccccc;
+}
