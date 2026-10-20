@@ -14,7 +14,7 @@
         <div class="accionesUsuario">
             <span class="usuarioLogeado">Usuario: admin</span>
             <!-- Al hacer click, vuelve al login -->
-            <button class="btnCerrarSesion">Cerrar sesión</button>
+            <button id="btnCerrarSesion" class="btnCerrarSesion">Cerrar sesión</button>
         </div>
     </header>
 
@@ -61,7 +61,7 @@
                         <input type="number" id="nota" class="campo" min="0" max="10" step="0.1" placeholder="Ej: 7.5" required>
                     </div>
 
-                    <button type="button" class="btnAnadir">Añadir nota</button>
+                    <button type="button" id="btnAnadir" class="btnAnadir">Añadir nota</button>
                     <p id="mensaje"></p>
                 </form>
             </div>
@@ -122,7 +122,7 @@
 
                 <div class="resumenNotas">
                     <div class="notaMedia">Nota media: <span id="notaMedia">-</span></div>
-                    <button type="button" class="btnEliminar">Eliminar última nota</button>
+                    <button type="button" id="btnEliminar" class="btnEliminar">Eliminar última nota</button>
                 </div>
             </div>
 
