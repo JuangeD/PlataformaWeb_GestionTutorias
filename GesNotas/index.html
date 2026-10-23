@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="/GesNotas/css/styles.css">
+    <script src="/GesNotas/js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="titulo">Gestión de notas</div>
+        <div class="accionesUsuario">
+            <span class="usuarioLogeado">Usuario: admin</span>
+            <!-- Al hacer click, vuelve al login -->
+            <button id="btnCerrarSesion" class="btnCerrarSesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/PagTablonAnuncios/index.html">Anuncios</a>
+        <a href="/PagFichaDatosAlumno/index.html">Ficha datos alumno</a>
+        <a href="/PagGestionCitas/index.html">Gestión de citas</a>
+        <a href="/GesNotas/index.html" class="active">Gestión de notas</a>
+        <a href="/FaltasAsistencia/index.html">Faltas de asistencia</a>
+    </nav>
+
+    <main>
+        <div class="contenedorPaneles">
+
+            <!-- Panel izquierdo: formulario para añadir una nota -->
+            <div class="panel panelFormulario">
+                <div class="tituloPanel">Añadir calificación</div>
+                <form>
+                    <div class="grupoFormulario">
+                        <label for="asignatura">Asignatura:</label>
+                        <select id="asignatura" class="campo" required>
+                            <option value="">Seleccione una asignatura...</option>
+                            <option value="Programación">Programación</option>
+                            <option value="Bases de Datos">Bases de Datos</option>
+                            <option value="Lenguajes de Marcas">Lenguajes de Marcas</option>
+                            <option value="Entornos de Desarrollo">Entornos de Desarrollo</option>
+                            <option value="Sistemas Informáticos">Sistemas Informáticos</option>
+                            <option value="FOL">FOL</option>
+                        </select>
+                    </div>
+
+                    <div class="grupoFormulario">
+                        <label for="evaluacion">Evaluación:</label>
+                        <select id="evaluacion" class="campo" required>
+                            <option value="">Seleccione la evaluación...</option>
+                            <option value="1">1ª Evaluación</option>
+                            <option value="2">2ª Evaluación</option>
+                            <option value="3">3ª Evaluación</option>
+                        </select>
+                    </div>
+
+                    <div class="grupoFormulario">
+                        <label for="nota">Nota (0 - 10):</label>
+                        <input type="number" id="nota" class="campo" min="0" max="10" step="0.1" placeholder="Ej: 7.5" required>
+                    </div>
+
+                    <button type="button" id="btnAnadir" class="btnAnadir">Añadir nota</button>
+                    <p id="mensaje"></p>
+                </form>
+            </div>
+
+            <!-- Panel derecho: listado de notas -->
+            <div class="panel panelListado">
+                <div class="tituloPanel">Boletín de calificaciones</div>
+
+                <div class="barraFiltro">
+                    <label for="filtroEvaluacion">Ver evaluación:</label>
+                    <select id="filtroEvaluacion" class="campo">
+                        <option value="todas">Todas</option>
+                        <option value="1">1ª Evaluación</option>
+                        <option value="2">2ª Evaluación</option>
+                        <option value="3">3ª Evaluación</option>
+                    </select>
+                </div>
+
+                <div class="contenedorTabla">
+                    <table class="tablaNotas">
+                        <thead>
+                            <tr>
+                                <th>Asignatura</th>
+                                <th>Evaluación</th>
+                                <th>Nota</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoNotas">
+                            <!-- Notas simuladas -->
+                            <tr data-evaluacion="1">
+                                <td>Programación</td>
+                                <td>1ª Evaluación</td>
+                                <td>8.5</td>
+                                <td class="notaAprobada">Aprobado</td>
+                            </tr>
+                            <tr data-evaluacion="1">
+                                <td>Bases de Datos</td>
+                                <td>1ª Evaluación</td>
+                                <td>6.0</td>
+                                <td class="notaAprobada">Aprobado</td>
+                            </tr>
+                            <tr data-evaluacion="1">
+                                <td>Lenguajes de Marcas</td>
+                                <td>1ª Evaluación</td>
+                                <td>4.2</td>
+                                <td class="notaSuspensa">Suspenso</td>
+                            </tr>
+                            <tr data-evaluacion="2">
+                                <td>Entornos de Desarrollo</td>
+                                <td>2ª Evaluación</td>
+                                <td>7.0</td>
+                                <td class="notaAprobada">Aprobado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="resumenNotas">
+                    <div class="notaMedia">Nota media: <span id="notaMedia">-</span></div>
+                    <button type="button" id="btnEliminar" class="btnEliminar">Eliminar última nota</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <a href="/PaginaInicial/index.html">Inicio</a>
+        <span>2026 Pagina Proyecto Web. Salvador - Juan Gerardo - Ángel.</span>
+        <a href="/PagContacto/index.html">Contacto</a>
+    </footer>
+
+</body>
+</html>

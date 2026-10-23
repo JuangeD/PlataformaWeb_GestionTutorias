@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faltas de Asistencia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- cabecera -->
+    <header>
+        <div class="titulo">Faltas de asistencia</div>
+        <div class="accionesUsuario">
+            <span class="usuarioLogeado">Usuario: admin</span>
+            <button class="btnCerrarSesion">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <!-- Menu de navegacion -->
+    <nav>
+        <a href="/PagTablonAnuncios/index.html">Anuncios</a>
+        <a href="/PagFichaDatosAlumno/index.html">Ficha datos alumno</a>
+        <a href="/PagGestionCitas/index.html">Gestión de citas</a>
+        <a href="/GesNotas/index.html">Gestión de notas</a>
+        <a href="/FaltasAsistencia/index.html" class="active">Faltas de asistencia</a>
+    </nav>
+
+    <main>
+        <!-- Contenedor de los 2 paneles -->
+        <div class="contenedorPaneles">
+            <!-- Panel izquierdo de registrar kas faltas -->
+            <div class="panel panelFormulario">
+                <div class="tituloPanel">Registrar falta</div>
+                <form>
+                    <div class="grupoFormulario">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" class="campo" required>
+                    </div>
+
+                    <div class="grupoFormulario">
+                        <label for="asignatura">Asignatura:</label>
+                        <select id="asignatura" class="campo" required>
+                            <option value="">Seleccione una asignatura...</option>
+                            <option value="Programación">Programación</option>
+                            <option value="Bases de Datos">Bases de Datos</option>
+                            <option value="Lenguajes de Marcas">Lenguajes de Marcas</option>
+                            <option value="Entornos de Desarrollo">Entornos de Desarrollo</option>
+                            <option value="Sistemas Informáticos">Sistemas Informáticos</option>
+                            <option value="FOL">FOL</option>
+                        </select>
+                    </div>
+
+                    <div class="grupoFormulario">
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo" class="campo" required>
+                            <option value="">Seleccione el tipo...</option>
+                            <option value="Falta">Falta de asistencia</option>
+                            <option value="Retraso">Retraso</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btnAnadir">Registrar falta</button>
+                    <p id="mensaje"></p>
+                </form>
+            </div>
+
+            <!-- Panel de la derecha  -->
+            <div class="panel panelListado">
+                <div class="tituloPanel">Historial de faltas</div>
+
+                <div class="resumenFaltas">
+                    <div class="tarjetaResumen">
+                        <span>Total</span>
+                        <strong id="totalFaltas">0</strong>
+                    </div>
+                    <div class="tarjetaResumen">
+                        <span>Justificadas</span>
+                        <strong id="totalJustificadas">0</strong>
+                    </div>
+                    <div class="tarjetaResumen">
+                        <span>Sin justificar</span>
+                        <strong id="totalPendientes">0</strong>
+                    </div>
+                </div>
+
+                <div class="contenedorTabla">
+                    <table class="tablaNotas">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Asignatura</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoFaltas">
+                            <tr>
+                                <td>05/10/2026</td>
+                                <td>Programación</td>
+                                <td>Falta</td>
+                                <td class="estadoPendiente">Sin justificar</td>
+                                <td><button class="btnJustificar">Justificar</button></td>
+                            </tr>
+                            <tr>
+                                <td>07/10/2026</td>
+                                <td>Bases de Datos</td>
+                                <td>Retraso</td>
+                                <td class="estadoJustificada">Justificada</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>13/10/2026</td>
+                                <td>FOL</td>
+                                <td>Falta</td>
+                                <td class="estadoPendiente">Sin justificar</td>
+                                <td><button class="btnJustificar">Justificar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="resumenNotas">
+                    <span></span>
+                    <button type="button" class="btnEliminar">Eliminar última falta</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer>
+        <a href="/PaginaInicial/index.html">Inicio</a>
+        <span>2026 Pagina Proyecto Web. Salvador - Juan Gerardo - Ángel.</span>
+        <a href="/PagContacto/index.html">Contacto</a>
+    </footer>
+
+</body>
+</html>
